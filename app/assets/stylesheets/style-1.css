@@ -1,0 +1,150 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#navbar {
+  margin: 0px 36px 0px 60px;
+  padding: 10px;
+  background: rgba(0, 0, 0, .8);
+}
+
+#navbar li {
+  display: inline;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-family: 'AdelleSans-Thin';
+  padding: 0px 10px 0px 10px;
+}
+
+#navbar li:hover {
+  background-color: red;
+  transition: .3s;
+  cursor: pointer;
+  /*border-radius: 6px;*/
+}
+
+
+
+
+#front-table li {
+  display: inline-block;
+  height: 100px;
+  width: 40%;
+  border: 3px solid white;
+  margin: 0px;
+  background-color: black;
+}
+
+#front-table p {
+  font-family: 'AdelleSans-Thin';
+  padding-top: 30px;
+  color: white;
+  font-size: 30px;
+
+}
+
+
+#front-table li:hover {
+  background-color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  border: 5px solid black;
+}
+
+#front-table li:hover{
+  background-color: white;
+}
+
+#front-table p:hover {
+  color: black;
+}
+
+
+
+#myCarousel {
+    box-shadow: 2px 3px 8px 6px black;
+    margin-top:30px;
+}
+
+
+
+
+
+#header {
+background-color: black;
+height: 60px;
+z-index: 4;
+margin-top: 2px;
+ }
+
+#header li {
+  float: left;
+  color: white;
+  /*font-size: 40px;*/
+  display: inline;
+  margin-left: 50px;
+}
+
+#logo-font {
+  font-family: 'AdelleSans-Thin';
+  font-size: 40px;
+  margin-top: 7px;
+
+
+}
+
+
+
+.seperater-text {
+  color: white;
+  text-decoration: underline;
+  font-family: 'AdelleSans-Thin';
+  font-size: 50px;
+  padding-top: 30px;
+  /*background-color: rgba(0, 0, 0, .);*/
+  /*text-align: center;*/
+  /*margin: 15px;*/
+}
+
+
+
+.phone-email {
+  margin-top: 30px;
+  font-family: 'AdelleSans-Thin';
+  font-size: 20px;
+}
+
+/*
+li.below:after { /* by using :after we place the caption after the image, when used with display:block this will be underneath the image*/
+/*content: attr(title); /*places the contents of title below the image*/
+/*display:block; puts the caption on its own line instead of at the side of the image*/
+
+/*.products p {
+  color: white;
+  font-family: 'AdelleSans-Thin';
+  font-size: 16px;
+  text-decoration: emphasize;
+}*/
+
+@media (max-width: 760px) {
+
+
+  #logo-font {
+    font-size: 20px;
+  }
+
+  #front-table p{
+    font-size: 18px;
+
+  }
+}
+
+@media (max-width: 960px) {
+  .phone-email {
+    margin: 0px;
+    font-size: 20px;
+  }
+
+
+  }

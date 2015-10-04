@@ -2,14 +2,13 @@ Rails.application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
- resources :listings
-resources :charges
-resources :checkout
-resources :shipping
-resources :orders
-resources :cart
-resources :admins
+resources :listings 
+
+
+
+
 resources :pictures
+
 
 get  "/admin"  => "session#new"
 post "/session"      => "session#create"

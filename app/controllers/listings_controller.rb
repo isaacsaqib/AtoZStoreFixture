@@ -1,25 +1,21 @@
 class ListingsController < ApplicationController
-	
+	skip_before_filter  :verify_authenticity_token
 	def index
-		
 
-		if params[:remove]
-			Listing.delete(params[:remove])
-		end
 		@listings = Listing.all
 
-		@listings_new = Listing.where(:section => "New")
-		@listings_tops = Listing.where(:section => "Tops")
-		@listings_bottoms = Listing.where(:section => "Bottoms")
-		@listings_headwear = Listing.where(:section => "Headwear")
-		@listings_wristwear = Listing.where(:section => "Wristwear")
-		@listings_collection = Listing.where(:section => "Collection")
+		@listings_gondolas = Listing.where(:section => "Gondola and Accessories")
+		@listings_mannequins = Listing.where(:section => "Mannequin")
+		@listings_pharmacy_displays = Listing.where(:section => "Pharmacy Display")
+		@listings_security_mirrors = Listing.where(:section => "Security Mirror")
+		@listings_shopping_carts_and_baskets = Listing.where(:section => "Shopping Carts and Baskets")
+		@listings_showcases = Listing.where(:section => "Showcase")
+		@listings_slatwall_and_accessories = Listing.where(:section => "Slatwall and Accessories")
+		@listings_tags_and_guns = Listing.where(:section => "Tags and Guns")
+		@listings_wire_baskets = Listing.where(:section => "Wire Basket")
+		
 
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @listings }
-    end
+		@listing = Listing.find_by(params[:id])
 
 	end
 
@@ -58,23 +54,11 @@ end
 	
 
 	def show
-		if params[:id]
-			session[:cart] ||= {}
-		@listing = Listing.find(params[:id])
-		@count_cart = session[:cart].count + 2
-			session[:cart][@count_cart] = [@listing.name,@listing.price,params[:product_id],params[:size],@count_cart]
-		
-		end	
 
-		if params[:remove]
-			Listing.delete(params[:remove])
-		end
-
-	  # Amount in cents
-	  	
-	  	@amount = @listing.price
-
-	  	 @listing  = Listing.find(params[:id])
+	  	@listing = Listing.find(params[:id])
+	  	# @listings_security_mirrors = Listing.where(:section => "Security Mirror")
+	  	# @security_mirror_pictures = @listings_security_mirrors.pictures
+    	
     	@pictures = @listing.pictures
 
     	respond_to do |format|
@@ -89,19 +73,20 @@ end
 
 
 	def update
-		@listing = Listing.find(params[:id])
-
-			if @listing.update(listing_params)
-				redirect_to "/"
-			else
-				render 'edit'
-			end
+		 @listing = Listing.find(params[:id])
+    	if @listing.update(listing_params)
+   		 redirect_to @listing
+  		else
+    	render 'edit'
+  		end
 	end
 
 
 	def destroy
 		@listing = Listing.find(params[:id])
 		@listing.destroy
+
+
 	end
 
 
@@ -109,10 +94,11 @@ end
 	private
 
 	def listing_params
-		params.require(:listing).permit(:name, :price, :images, :avatar, :size, :pictures, :description, :section)
+		params.require(:listing).permit(:name, :images, :size, :pictures, :description, :section)
 
 	end
+end
 	
 
 
-end
+

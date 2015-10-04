@@ -1,249 +1,273 @@
 
-	<script type="text/javascript" src="assets/application.js"></script>
+
+<body style="background-color:white;">
+<h1 class="h1-headers"> Products </h1>
 
 
-<ul id="listings-index-nav">
-	<li>NEW •</li>
-	<li>TOPS •</li>
-	<li>BOTTOMS •</li>
-	<li>HEADWEAR •</li>
-	<li>WRISTWEAR </li>
 
+<ul id= "listings-index-table">
+	<li>
+
+	<table class="products" id="gondolas">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_gondolas.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+
+	<li>
+
+	<table class="products" id="mannequins">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_mannequins.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+	<li>
+
+	<table class="products" id="pharmacy_displays">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_pharmacy_displays.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+	<li>
+
+	<table class="products" id="security_mirrors">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_security_mirrors.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+	<li>
+
+	<table class="products" id="shopping_carts_and_baskets">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_shopping_carts_and_baskets.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+	<li>
+
+	<table class="products" id="showcases">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_showcases.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+	<li>
+
+	<table class="products" id="slatwall_and_accessories">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_slatwall_and_accessories.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+	<li>
+
+	<table class="products" id="tags_and_guns">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_tags_and_guns.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+	<li>
+
+	<table class="products" id="wire_baskets">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_wire_baskets.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+</li>
+					<!-- Name, price and buttons -->
+					
+					</li>
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
 </ul>
 
-
-<table class="products" id="new">
-	<tr>
-		<td class="col">
-			<ul>
-			<% @listings_new.each do |listing| %>
-
-				<% if listing.pictures.first %>
-            	<li>
-            	<!-- listing image pictures -->
-            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
-            	<% else %>
-              		N/A
-            	<% end %>
-				
-				<!-- Name, price and buttons -->
-				<form method="get">
-				<input type="hidden" name="id" value="<%=listing.id%>">
-				<a href="<%=listing_path(listing)%>"><%=listing.name %></a><br> 
-				<p>$<%=listing.price %>.00</p><br>
-				<div class="line-separator"></div>
-				
-				 <br/>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_listing_path(listing) %></p>
-							<p><a href="?remove=<%=listing.id%>">Delete</a></p><br>
-							<% end %>
-							<br>
-							<br>
-				</form>	
-
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
-</table>
-
-
-
-<table class="products" id="tops">
-	<tr>
-		<td class="col">
-			<ul>
-			<% @listings_tops.each do |listing| %>
-
-				<% if listing.pictures.first %>
-            	<li>
-            	<!-- listing image pictures -->
-            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
-            	<% else %>
-              		N/A
-            	<% end %>
-				
-				<!-- Name, price and buttons -->
-				<form method="get">
-				<input type="hidden" name="id" value="<%=listing.id%>">
-				<a href="<%=listing_path(listing)%>"><%=listing.name %></a><br> 
-				<p>$<%=listing.price %>.00</p><br>
-				<div class="line-separator"></div>
-				
-				 <br/>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_listing_path(listing) %></p>
-							<p><a href="?remove=<%=listing.id%>">Delete</a></p><br>
-							<% end %>
-							<br>
-							<br>
-				</form>	
-
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
-</table>
-
-<table class="products" id="bottoms">
-	<tr>
-		<td class="col">
-			<ul>
-			<% @listings_bottoms.each do |listing| %>
-
-				<% if listing.pictures.first %>
-            	<li>
-            	<!-- listing image pictures -->
-            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
-            	<% else %>
-              		N/A
-            	<% end %>
-				
-				<!-- Name, price and buttons -->
-				<form method="get">
-				<input type="hidden" name="id" value="<%=listing.id%>">
-				<a href="<%=listing_path(listing)%>"><%=listing.name %></a><br> 
-				<p>$<%=listing.price %>.00</p><br>
-				<div class="line-separator"></div>
-				
-				 <br/>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_listing_path(listing) %></p>
-							<p><a href="?remove=<%=listing.id%>">Delete</a></p><br>
-							<% end %>
-							<br>
-							<br>
-				</form>	
-
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
-</table>
-
-
-<table class="products" id="headwear">
-	<tr>
-		<td class="col">
-			<ul>
-			<% @listings_headwear.each do |listing| %>
-
-				<% if listing.pictures.first %>
-            	<li>
-            	<!-- listing image pictures -->
-            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
-            	<% else %>
-              		N/A
-            	<% end %>
-				
-				<!-- Name, price and buttons -->
-				<form method="get">
-				<input type="hidden" name="id" value="<%=listing.id%>">
-				<a href="<%=listing_path(listing)%>"><%=listing.name %></a><br> 
-				<p>$<%=listing.price %>.00</p><br>
-				<div class="line-separator"></div>
-				
-				 <br/>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_listing_path(listing) %></p>
-							<p><a href="?remove=<%=listing.id%>">Delete</a></p><br>
-							<% end %>
-							<br>
-							<br>
-				</form>	
-
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
-</table>
-
-
-<table class="products" id="wristwear">
-	<tr>
-		<td class="col">
-			<ul>
-			<% @listings_wristwear.each do |listing| %>
-
-				<% if listing.pictures.first %>
-            	<li>
-            	<!-- listing image pictures -->
-            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
-            	<% else %>
-              		N/A
-            	<% end %>
-				
-				<!-- Name, price and buttons -->
-				<form method="get">
-				<input type="hidden" name="id" value="<%=listing.id%>">
-				<a href="<%=listing_path(listing)%>"><%=listing.name %></a><br> 
-				<p>$<%=listing.price %>.00</p><br>
-				<div class="line-separator"></div>
-				
-				 <br/>
-							 <% if logged_in? %>
-							<p><%=link_to 'Edit', edit_listing_path(listing) %></p>
-							<p><a href="?remove=<%=listing.id%>">Delete</a></p><br>
-							<% end %>
-							<br>
-							<br>
-				</form>	
-
-				</li>
-				<% end %>
-			</ul>
-		</td>
-	</tr>
-</table>
-
-<!-- use this table to delete collections -->
-
-<!-- <table class="products" id="wristwear">
-	<tr>
-		<td class="col">
-			<ul> -->
-			<%# @listings_collection.each do |listing| %>
-
-				<%# if listing.pictures.first %>
-            	<!-- <li> -->
-            	<!-- listing image pictures -->
-            	<%#= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
-            	<%# else %>
-              		<!-- N/A -->
-            	<%# end %>
-				
-				<!-- Name, price and buttons -->
-				<!-- <form method="get"> -->
-				<!-- <input type="hidden" name="id" value="<%#=listing.id%>"> -->
-				<!-- <a href="<%#=listing_path(listing)%>"><%#=listing.name %></a><br>  -->
-				<!-- <p>$<%#=listing.price %>.00</p><br> -->
-				<!-- <div class="line-separator"></div> -->
-				
-				 <!-- <br/> -->
-							 <%# if logged_in? %>
-							<!-- <p><%#=link_to 'Edit', edit_listing_path(listing) %></p> -->
-							<!-- <p><a href="?remove=<%#=listing.id%>">Delete</a></p><br> -->
-							<%# end %>
-				<!-- 			<br>
-							<br>
-				</form>	
-
-				</li> -->
-				<%# end %>
-	<!-- 		</ul>
-		</td>
-	</tr>
-</table>
- -->
-
-
-
-
-
-
-
+</body>

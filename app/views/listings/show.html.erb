@@ -1,25 +1,20 @@
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-<script type="text/javascript" src="/assets/application.js"></script>
 
-
+ 
 
 
 
 
    <ul id="listings-show-pictures">
    <% @pictures.each do |pic| %>
-      <li><%= image_tag pic.image.url %></li>
-        <%# link_to "Edit picture", picture_path(pic) %>
 
-        <%#
-          link_to "Delete picture", pic,
-            :data => { :confirm => "Are you sure?" },
-            :method => :delete
-          %>
-
-
+      <li>
+      <%= image_tag pic.image.url %><br>
+      <%= pic.description %><br>
+      <%= pic.size %><br>
+      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+      </li>
      
-<% end %> 
+  <% end %> 
     </ul>  
 
 
@@ -31,43 +26,8 @@
 
 
 
-<div id="listings-details">
-	<form method="get">
-				<input type="hidden" name="product_id" value="<%=@listing.id%>">
-				<a style="text-decoration:none;" href="<%=listing_path(@listing)%>"></a>
-				<p style="font-size:30px;"><%= @listing.name %></p><br>
-				<p style="color:gray; margin:0px;">$<%= @listing.price %></p> <br>
-				<p style="margin:0px;"><%= @listing.description.upcase %></p>
-				<br>
-				<p style="color:gray;">Size</p>
-				<select id="size" name="size"><br>
-				<% @size = @listing.size.split(",") %>
-
-					<% @size.each do |s| %>
-						<option value="<%= s %>"><%= s %></option>
-					<% end %>
-
-				 </select>
-				 <br/>
-
-				 <% if logged_in? %>
-				<%=link_to 'Edit', edit_listing_path(@listing) %>
-				<a href="?remove=<%=@listing.id%>">Delete</a><br>
-				<% end %>
-				<br>
-				<input id="add-to-cart-btn" type="submit" value="Add to cart">
-				<p id="added">Added to cart</p>
-				<br>
-				<br>
-
-	</form>	
-</div>
 
 
-
-
-
-  <input type="hidden" id="listingID" value="<%= @listing.id %>">
 
 
 

@@ -3,7 +3,7 @@
   # GET /pictures.json
   def index
 
-    @listing = Listing.find(params[:listing_id])
+    @listing = Listing.find(params[:id])
 
     @pictures = @listing.pictures
     debugger
@@ -41,7 +41,7 @@
     #@gallery = Gallery.find(params[:gallery_id])
 
     @picture = Picture.find(params[:id])
-    @listing = Listing.find(params[:id])
+
     # @picture = Picture.find(params[:id])
   end
 
@@ -70,19 +70,16 @@
   # PUT /pictures/1.json
   def update
 
-    @listing = Listing.find(params[:listing_id])
 
-    @picture = @listing.pictures.find(params[:id])
 
-    respond_to do |format|
-      if @picture.update_attributes(picture_params)
-        format.html { redirect_to listing_path(@listing), notice: 'Picture was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
-      end
-    end
+    @picture = Picture.find(params[:id])
+    if @picture.update(picture_params)
+    redirect_to @picture.listing
+  else
+    render 'edit'
+  end
+
+ 
   end
 
   # DELETE /pictures/1
@@ -114,6 +111,6 @@
   private
 
   def picture_params
-    params.require(:picture).permit(:description, :listing_id, :images)
+    params.require(:picture).permit(:description, :listing_id, :images, :size)
   end
 end

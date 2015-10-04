@@ -1,0 +1,53 @@
+@import url("bootstrap.min.css");
+
+.carousel-inner {
+position: relative;
+/*width: 65%;*/
+overflow: hidden;
+display: block;
+margin: auto;
+}
+
+#machine_f1 {
+  height: auto;
+  width: 800px;
+}
+
+#machine_f2, #machine_f3 {
+  height: auto;
+  width: 800px;
+}
+
+#machine_f3 {
+  border-radius: 40%;
+}
+
+@media (max-width: 768px) {
+  #machine_f1 {
+    height: auto;
+    width: 500px;
+  }
+
+}
+
+
+.navbar-inverse {
+background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
+background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
+background-image: linear-gradient(to bottom, white -27%, black 46%, white 153%);
+}
+
+.navbar-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 981px;
+}
+
+
+.featurette-divider {
+  color: black;
+
+}
