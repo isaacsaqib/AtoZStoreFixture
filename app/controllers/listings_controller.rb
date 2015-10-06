@@ -13,6 +13,9 @@ class ListingsController < ApplicationController
 		@listings_slatwall_and_accessories = Listing.where(:section => "Slatwall and Accessories")
 		@listings_tags_and_guns = Listing.where(:section => "Tags and Guns")
 		@listings_wire_baskets = Listing.where(:section => "Wire Basket")
+		@listings_racks = Listing.where(:section => "Racks")
+		@listings_hangers = Listing.where(:section => "Hangers")
+		@listings_gridwall = Listing.where(:section => "Gridwall")
 		
 
 		@listing = Listing.find_by(params[:id])
@@ -22,10 +25,7 @@ class ListingsController < ApplicationController
 
 	def new
 		@listing = Listing.new
-		respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @listing }
-    end
+
 	end
 
 
@@ -56,15 +56,9 @@ end
 	def show
 
 	  	@listing = Listing.find(params[:id])
-	  	# @listings_security_mirrors = Listing.where(:section => "Security Mirror")
-	  	# @security_mirror_pictures = @listings_security_mirrors.pictures
+
     	
     	@pictures = @listing.pictures
-
-    	respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @listing }
-    end
 	end
 
 	def edit 
@@ -74,11 +68,12 @@ end
 
 	def update
 		 @listing = Listing.find(params[:id])
-    	if @listing.update(listing_params)
-   		 redirect_to @listing
-  		else
-    	render 'edit'
-  		end
+    		if @listing.update(listing_params)
+    			redirect_to @listing
+    		else
+    			render :edit
+    		end
+
 	end
 
 

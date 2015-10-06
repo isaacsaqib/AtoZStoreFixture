@@ -13,6 +13,7 @@
 			<td class="col">
 				<ul>
 				<% @listings_gondolas.each do |listing| %>
+
 	            	<li>
 					<% if listing.pictures.first %>
 	            	<!-- listing image pictures -->
@@ -259,15 +260,109 @@
 	                <%= link_to "Edit Section", edit_listing_path(listing) %>
 
 
-</li>
+					</li>
 					<!-- Name, price and buttons -->
 					
-					</li>
 					<% end %>
 				</ul>
 			</td>
 		</tr>
 	</table>
+	</li>
+
+
+
+	<li>
+	<table class="products" id="racks">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_racks.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					</li>
+					<!-- Name, price and buttons -->
+					
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+
+
+	<li>
+	<table class="products" id="hangers">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_hangers.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					</li>
+					<!-- Name, price and buttons -->
+					
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+
+		<li>
+	<table class="products" id="gridwall">
+		<tr>
+			<td class="col">
+				<ul>
+				<% @listings_gridwall.each do |listing| %>
+	            	<li>
+					<% if listing.pictures.first %>
+	            	<!-- listing image pictures -->
+	            	<%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+					<p><%= listing.name %></p>
+					<% else %>
+	              		N/A
+	            	<% end %>
+					<%= link_to "Delete Section", listing, :method => :delete,
+	                                  data: { confirm: "You sure?" } %>
+	                <%= link_to "Edit Section", edit_listing_path(listing) %>
+
+
+					</li>
+					<!-- Name, price and buttons -->
+					
+					<% end %>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</li>
+
+
+
+
 </ul>
 
 </body>
