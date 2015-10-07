@@ -66,15 +66,25 @@ end
 	end
 
 
-	def update
-		 @listing = Listing.find(params[:id])
-    		if @listing.update(listing_params)
-    			redirect_to @listing
-    		else
-    			render :edit
-    		end
+	 def update
+    @listing = Listing.find(params[:id])
 
-	end
+    respond_to do |format|
+      if @listing.update_attributes(listing_params)
+        if params[:images]
+          # The magic is here ;)
+          params[:images].each { |image|
+            @listing.pictures.create(image: image)
+          }
+        end
+        format.html { redirect_to @listing, notice: 'listing was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @listing.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 
 	def destroy

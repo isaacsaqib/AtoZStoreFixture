@@ -2,7 +2,7 @@
  
 
 
-<%= form_for :listing, url: listing_path(@listing), method: :patch do |f| %>
+<%= form_for :listing, url: listing_path(@listing),:html => {:multipart => true}, method: :patch do |f| %>
  
     <%= f.label :name %><br>
     <%= f.text_field :name %>

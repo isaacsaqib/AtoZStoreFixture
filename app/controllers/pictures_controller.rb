@@ -68,19 +68,20 @@
 
   # PUT /pictures/1
   # PUT /pictures/1.json
-  def update
+def update
 
-
+    # @listing = Listing.find(params[:listing_id])
 
     @picture = Picture.find(params[:id])
     if @picture.update(picture_params)
-    redirect_to @picture.listing
-  else
-    render 'edit'
+      redirect_to "/"
+    else
+      render :edit
+    end
+    
+     
   end
 
- 
-  end
 
   # DELETE /pictures/1
   # DELETE /pictures/1.json
@@ -111,6 +112,6 @@
   private
 
   def picture_params
-    params.require(:picture).permit(:description, :listing_id, :images, :size)
+    params.require(:picture).permit(:description, :listing_id, :image, :size)
   end
 end
