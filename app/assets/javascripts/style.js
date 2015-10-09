@@ -1,7 +1,10 @@
 $(document).ready(function(){
-
-	$("#gondolas-listings-show-pictures").hide();
+	
 	$(".listings-show-lists").hide();
+
+
+
+
 
 
 
@@ -34,15 +37,14 @@ $(document).ready(function(){
 	SetLiSelector(12, 'gridwall');
 
 
-
 function SetNames(name) {
 	$("#" + name).on("click", function(){
 		event.preventDefault();
 		$("#" + name + "-listings-show-pictures").show();
 		$(".products").fadeOut();
-	})
+	});
 
-} 
+};
 
 function SetLiSelector(li_id, name) {
 	$("#listings-nav li:nth-child(" + li_id + ")").on("click", function(){
@@ -50,14 +52,14 @@ function SetLiSelector(li_id, name) {
 		$("#" + name + "-listings-show-pictures").show();
 		$(".products").fadeOut();
 
-	})
+	});
 
 
-}
-
-
-
+};
 
 
 
-})
+
+
+
+});

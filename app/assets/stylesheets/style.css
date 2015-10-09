@@ -13,12 +13,24 @@ html, body {
 	/*text-transform: up*/
 }
 
+.listings-show-lists li {
+	display: inline-block;
+}
+
 #listings-nav li:hover {
 	cursor: pointer;
 	color: #CC6601;
 }
 
-#gondolas-listings-show-pictures img {
+#security_mirrors-listings-show-pictures img {
+	height: 150px;
+	width: 200px;
+	
+}
+
+#hangers-listings-show-pictures img {
+	height: 150px;
+	width: 200px;
 	
 }
 
