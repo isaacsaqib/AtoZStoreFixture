@@ -5,6 +5,19 @@ html, body {
 
 }
 
+#listings-nav li {
+	display: inline-block;
+	font-family: 'AdelleSans-Thin';
+	/*margin-right: 5px;*/
+	/*margin-left: 5px;*/
+	/*text-transform: up*/
+}
+
+#listings-nav li:hover {
+	cursor: pointer;
+	color: #CC6601;
+}
+
 #gondolas-listings-show-pictures img {
 	
 }

@@ -1,7 +1,21 @@
 
 <div class=".wrapper">
 	<body style="background-color:white;">
-	<h1 class="h1-headers"> PRODUCTS </h1>
+	<ul id="listings-nav">
+		<li>Gondolas •</li>
+		<li>Mannequins •</li>
+		<li>Pharmacy Displays •</li>
+		<li>Security Mirrors •</li>
+		<li>Shopping Carts And Baskets •</li>
+		<li>Showcases •</li>
+		<li>Slatwall And Accessories •</li>
+		<li>Tags And Guns •</li>
+		<li>Wire Baskets •</li>
+		<li>Racks •</li>
+		<li>Hangers •</li>
+		<li>Gridwall </li>
+
+	</ul>
 
 
 
@@ -372,7 +386,7 @@
 
 
 
-   <ul id="gondolas-listings-show-pictures">
+   <ul class="listings-show-lists" id="gondolas-listings-show-pictures">
    <% @gondolas_pictures.each do |pic| %>
 
       <li>
@@ -387,7 +401,7 @@
 
 
 
-   <ul id="mannequins-listings-show-pictures">
+   <ul class="listings-show-lists" id="mannequins-listings-show-pictures">
    <% @mannequins_pictures.each do |pic| %>
 
       <li>
@@ -400,7 +414,8 @@
   <% end %> 
     </ul>  
 
-    <ul id="pharmacy_displays-listings-show-pictures">
+    <ul class=
+"listings-show-lists" id="pharmacy_displays-listings-show-pictures">
    <% @pharmacy_displays_pictures.each do |pic| %>
 
       <li>
@@ -414,20 +429,8 @@
     </ul>  
 
 
-    <ul id="pharmacy_displays-listings-show-pictures">
-   <% @pharmacy_displays_pictures.each do |pic| %>
-
-      <li>
-      <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-     
-  <% end %> 
-    </ul>  
-
-    <ul id="security_mirrors-listings-show-pictures">
+    <ul class=
+"listings-show-lists" id="security_mirrors-listings-show-pictures">
    <% @security_mirrors_pictures.each do |pic| %>
 
       <li>
@@ -440,7 +443,8 @@
   <% end %> 
     </ul>  
 
-    <ul id="shopping_carts_and_baskets-listings-show-pictures">
+    <ul class=
+"listings-show-lists" id="shopping_carts_and_baskets-listings-show-pictures">
    <% @shopping_carts_and_baskets_pictures.each do |pic| %>
 
       <li>
@@ -453,7 +457,8 @@
   <% end %> 
     </ul>  
 
-    <ul id="showcases-listings-show-pictures">
+    <ul class=
+"listings-show-lists" id="showcases-listings-show-pictures">
    <% @showcases_pictures.each do |pic| %>
 
       <li>
@@ -466,7 +471,8 @@
   <% end %> 
     </ul>  
 
-    <ul id="slatwall_and_accessories-listings-show-pictures">
+    <ul class=
+"listings-show-lists" id="slatwall_and_accessories-listings-show-pictures">
    <% @slatwall_and_accessories_pictures.each do |pic| %>
 
       <li>
@@ -479,7 +485,8 @@
   <% end %> 
     </ul>  
 
-    <ul id="tags_and_guns-listings-show-pictures">
+    <ul class=
+"listings-show-lists" id="tags_and_guns-listings-show-pictures">
    <% @tags_and_guns_pictures.each do |pic| %>
 
       <li>
@@ -493,7 +500,8 @@
     </ul>  
 
 
-        <ul id="wire_baskets-listings-show-pictures">
+        <ul class=
+    "listings-show-lists" id="wire_baskets-listings-show-pictures">
    <% @wire_baskets_pictures.each do |pic| %>
 
       <li>
@@ -506,7 +514,8 @@
   <% end %> 
     </ul>  
 
-    <ul id="racks-listings-show-pictures">
+    <ul class=
+"listings-show-lists" id="racks-listings-show-pictures">
    <% @racks_pictures.each do |pic| %>
 
       <li>
@@ -519,7 +528,8 @@
   <% end %> 
     </ul>  
 
-       <ul id="hangers-listings-show-pictures">
+       <ul class=
+   "listings-show-lists" id="hangers-listings-show-pictures">
    <% @hangers_pictures.each do |pic| %>
 
       <li>
@@ -533,7 +543,7 @@
     </ul>  
 
 
-   <ul id="gridwall-listings-show-pictures">
+   <ul class="listings-show-lists" id="gridwall-listings-show-pictures">
    <% @gridwall_pictures.each do |pic| %>
 
       <li>
