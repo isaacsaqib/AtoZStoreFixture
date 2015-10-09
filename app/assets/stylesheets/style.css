@@ -5,6 +5,36 @@ html, body {
 
 }
 
+/*sticky footer*/
+.wrapper-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -80px; 
+}
+.wrapper-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .wrapper-wrap:after {
+margin-top: 100px;
+  height: 110px; 
+}
+.site-footer {
+  background: #CC6601;
+}
+
+.site-footer p {
+	font-size: 10px;
+	font-family: 'AdelleSans-Thin';
+	color: white;
+}
+
+.site-footer p:nth-child(1) {
+	padding-top: 25px;
+}
+
+/*end sticky*/
+
 #tags_and_guns > tbody > tr > td > ul > li > a:nth-child(1) > img {
 
 
@@ -37,8 +67,10 @@ html, body {
 }
 
 #listings-index-table img {
-	height: 500px;
-	width: 400px;
+	height: 200;
+	width: 200px;
+	border: 10px solid black;
+	border-radius: 600px;
 }
 
 
