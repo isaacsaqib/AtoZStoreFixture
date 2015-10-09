@@ -5,6 +5,10 @@ html, body {
 
 }
 
+#gondolas-listings-show-pictures img {
+	
+}
+
 /*sticky footer*/
 .wrapper-wrap {
   min-height: 100%;
@@ -69,7 +73,7 @@ margin-top: 100px;
 #listings-index-table img {
 	height: 200;
 	width: 200px;
-	border: 10px solid black;
+	border: 7px solid #CC6601;
 	border-radius: 600px;
 }
 
@@ -83,8 +87,8 @@ margin-top: 100px;
 
 #listings-show-pictures li > img {
 
-	height: 500;
-	/*width: 302px;*/
+	height:400;
+	width: 302px;
 	/*margin-left: 10px;*/
 	margin-bottom: 20px;
 
