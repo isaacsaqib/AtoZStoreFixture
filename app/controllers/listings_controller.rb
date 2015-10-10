@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
 		@listings = Listing.all
 
 		@listings_gondolas = Listing.where(:section => "Gondola and Accessories")
-		@listings_gondolas_pictures = Listing.find_by(:id => 2)
+		@listings_gondolas_pictures = Listing.find_by(:id => 1)
 		@gondolas_pictures = @listings_gondolas_pictures.pictures
 
 
