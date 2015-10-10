@@ -4,7 +4,7 @@ class Picture < ActiveRecord::Base
 
   has_attached_file :image,
     :path => ":rails_root/public/images/:id/:filename",
-    :url  => "/images/:id/:filename"
+    :url  => "/images/:id/:filename",
     :storage => :s3,
             :bucket  => ENV['AWS_BUCKET']
 
