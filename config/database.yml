@@ -82,4 +82,4 @@ production:
   <<: *default
   database: az_production
   username: az
-  password: <%= ENV['AZ_DATABASE_PASSWORD'] %>
+  password: canarsie0988
