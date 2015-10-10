@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-	has_attached_file :pictures,
+	has_attached_file :image,
     :path => ":rails_root/public/images/:id/:filename",
     :url  => "/images/:id/:filename",
     :storage => :s3,
