@@ -1,6 +1,7 @@
   class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
+  skip_before_filter  :verify_authenticity_token
   def index
 
     @listing = Listing.find(params[:id])
