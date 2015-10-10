@@ -9,9 +9,9 @@ class ListingsController < ApplicationController
 		@gondolas_pictures = @listings_gondolas_pictures.pictures
 
 
-		# @listings_mannequins = Listing.where(:section => "Mannequin")
-		# @listings_mannequins_pictures = Listing.find_by(:id => 19)
-		# @mannequins_pictures = @listings_mannequins_pictures.pictures
+		@listings_mannequins = Listing.where(:section => "Mannequin")
+		@listings_mannequins_pictures = Listing.find_by(:id => 2)
+		@mannequins_pictures = @listings_mannequins_pictures.pictures
 		
 
 		# @listings_pharmacy_displays = Listing.where(:section => "Pharmacy Display")
