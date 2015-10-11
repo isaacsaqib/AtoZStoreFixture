@@ -113,7 +113,8 @@ end
 	def show
 
 	  	@listing = Listing.find(params[:id])
-
+	  	
+	  	@picture = Picture.find(params[:id])
     	
     	@pictures = @listing.pictures
 	end
