@@ -147,8 +147,11 @@ end
 	def destroy
 		@listing = Listing.find(params[:id])
 		@listing.destroy
-
-
+		if @listing.destroy
+			redirect_to @listing 
+		else
+			render :edit
+		end
 	end
 
 
