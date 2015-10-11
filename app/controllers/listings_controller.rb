@@ -60,18 +60,7 @@ class ListingsController < ApplicationController
 		@listings_gridwall = Listing.where(:section => "Gridwall")
 		@listings_gridwall_pictures = Listing.find_by(:id => 13)
 		@gridwall_pictures = @listings_gridwall_pictures.pictures
-		
-
-		
-		
-
 	
-
-
-
-		
-
-
 	end
 
 	# def set_names(name, id)
