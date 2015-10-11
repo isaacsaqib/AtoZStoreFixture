@@ -3,6 +3,8 @@ class ListingsController < ApplicationController
 	def index
 
 		@listings = Listing.all
+		@picture = Picture.find(params[:id])
+
 
 		@listings_gondolas = Listing.where(:section => "Gondola and Accessories")
 		@listings_gondolas_pictures = Listing.find_by(:id => 1)
@@ -114,7 +116,6 @@ end
 
 	  	@listing = Listing.find(params[:id])
 
-	  	@picture = Picture.find(params[:id])
     	
     	@pictures = @listing.pictures
 	end
