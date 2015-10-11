@@ -41,7 +41,7 @@ class ListingsController < ApplicationController
 		@slatwall_and_accessories_pictures = @listings_slatwall_and_accessories_pictures.pictures
 		
 		@listings_tags_and_guns = Listing.where(:section => "Tags and Guns")
-		@listings_tags_and_guns_pictures = Listing.find_by(:id => 9)
+		@listings_tags_and_guns_pictures = Listing.find_by(:id => 14)
 		@tags_and_guns_pictures = @listings_tags_and_guns_pictures.pictures
 		
 		@listings_wire_baskets = Listing.where(:section => "Wire Basket")
@@ -113,7 +113,7 @@ end
 	def show
 
 	  	@listing = Listing.find(params[:id])
-	  	
+
 	  	@picture = Picture.find(params[:id])
     	
     	@pictures = @listing.pictures
