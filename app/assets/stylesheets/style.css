@@ -1,14 +1,13 @@
-html, body {
-    height: 100%;
-    margin:0px;  
-    text-align: center;
 
-}
+
 
 body {
 	background-image: url('/484.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	 height: 100%;
+    margin:0px;  
+    text-align: center;
 }
 
 #listings-nav li {
