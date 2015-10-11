@@ -5,6 +5,12 @@ html, body {
 
 }
 
+body {
+	background-image: url('484.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #listings-nav li {
 	display: inline-block;
 	font-family: 'AdelleSans-Thin';
