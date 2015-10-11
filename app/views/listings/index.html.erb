@@ -21,9 +21,9 @@
 
 
 
-	<ul id= "listings-index-table">
+<ul id= "listings-index-table">
+		
 		<li>
-
 		<table class="products" id="gondolas">
 			<tr>
 				<td class="col">
@@ -54,7 +54,6 @@
 		</li>
 
 		<li>
-
 		<table class="products" id="mannequins">
 			<tr>
 				<td class="col">
@@ -82,8 +81,8 @@
 			</tr>
 		</table>
 		</li>
-		<li>
 
+		<li>
 		<table class="products" id="pharmacy_displays">
 			<tr>
 				<td class="col">
@@ -111,8 +110,8 @@
 			</tr>
 		</table>
 		</li>
-		<li>
 
+		<li>
 		<table class="products" id="security_mirrors">
 			<tr>
 				<td class="col">
@@ -140,8 +139,8 @@
 			</tr>
 		</table>
 		</li>
-		<li>
 
+		<li>
 		<table class="products" id="shopping_carts_and_baskets">
 			<tr>
 				<td class="col">
@@ -169,8 +168,8 @@
 			</tr>
 		</table>
 		</li>
-		<li>
 
+		<li>
 		<table class="products" id="showcases">
 			<tr>
 				<td class="col">
@@ -198,8 +197,8 @@
 			</tr>
 		</table>
 		</li>
-		<li>
 
+		<li>
 		<table class="products" id="slatwall_and_accessories">
 			<tr>
 				<td class="col">
@@ -227,8 +226,8 @@
 			</tr>
 		</table>
 		</li>
+		
 		<li>
-
 		<table class="products" id="tags_and_guns">
 			<tr>
 				<td class="col">
@@ -256,8 +255,9 @@
 			</tr>
 		</table>
 		</li>
-		<li>
 
+
+		<li>
 		<table class="products" id="wire_baskets">
 			<tr>
 				<td class="col">
@@ -347,7 +347,7 @@
 		</table>
 		</li>
 
-			<li>
+		<li>
 		<table class="products" id="gridwall">
 			<tr>
 				<td class="col">
@@ -375,184 +375,155 @@
 			</tr>
 		</table>
 		</li>
-
-
-
-
 	</ul>
 
 
-	   <ul class="listings-show-lists" id="gondolas-listings-show-pictures">
-   <% @gondolas_pictures.each do |pic| %>
-
-      <li>
-      <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-     
-  <% end %> 
-    </ul>  
+<ul class="listings-show-lists" id="gondolas-listings-show-pictures">
+	<% @gondolas_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
 
 
 
-   <ul class="listings-show-lists" id="mannequins-listings-show-pictures">
-   <% @mannequins_pictures.each do |pic| %>
+<ul class="listings-show-lists" id="mannequins-listings-show-pictures">
+	<% @mannequins_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
 
-      <li>
-      <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-     
-  <% end %> 
-    </ul>  
-
-    <ul class="listings-show-lists" id="pharmacy_displays-listings-show-pictures">
-   <% @pharmacy_displays_pictures.each do |pic| %>
-
-      <li>
-      <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-     
-  <% end %> 
-    </ul>  
+<ul class="listings-show-lists" id="pharmacy_displays-listings-show-pictures">
+	<% @pharmacy_displays_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
 
 
 
-    <ul class=
-"listings-show-lists" id="security_mirrors-listings-show-pictures">
-    <% @security_mirrors_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-   <% end %> 
-     </ul>  
- 
-
-    <ul class=
-"listings-show-lists" id="shopping_carts_and_baskets-listings-show-pictures">
-    <% @shopping_carts_and_baskets_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-   <% end %> 
-     </ul>  
- 
-
-    <ul class=
-"listings-show-lists" id="showcases-listings-show-pictures">
-    <% @showcases_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-   <% end %> 
-     </ul>  
- 
-
-    <ul class=
-"listings-show-lists" id="slatwall_and_accessories-listings-show-pictures">
-    <% @slatwall_and_accessories_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-   <% end %> 
-     </ul>  
- 
-
-    <ul class=
-"listings-show-lists" id="tags_and_guns-listings-show-pictures">
-    <% @tags_and_guns_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-     </ul>  
- 
- 
-
-        <ul class=
-    "listings-show-lists" id="wire_baskets-listings-show-pictures">
-    <% @wire_baskets_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-   <% end %> 
-     </ul>  
- 
-
-    <ul class=
-"listings-show-lists" id="racks-listings-show-pictures">
-    <% @racks_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-
-   <% end %> 
-     </ul>  
- 
-
-       <ul class=
-   "listings-show-lists" id="hangers-listings-show-pictures">
-    <% @hangers_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-
-      <% end %> 
+<ul class="listings-show-lists" id="security_mirrors-listings-show-pictures">
+	<% @security_mirrors_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
 
 
-     </ul>  
- 
- 
+<ul class="listings-show-lists" id="shopping_carts_and_baskets-listings-show-pictures">
+	<% @shopping_carts_and_baskets_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
 
-   <ul class="listings-show-lists" id="gridwall-listings-show-pictures">
-    <% @gridwall_pictures.each do |pic| %>
- 
-       <li>
-       <%= image_tag pic.image.url %><br>
-      <%= pic.description %><br>
-      <%= pic.size %><br>
-      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
-      </li>
-      <% end %> 
-    </ul>
+
+<ul class="listings-show-lists" id="showcases-listings-show-pictures">
+	<% @showcases_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
+
+
+<ul class="listings-show-lists" id="slatwall_and_accessories-listings-show-pictures">
+	<% @slatwall_and_accessories_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
+
+
+<ul class="listings-show-lists" id="tags_and_guns-listings-show-pictures">
+	<% @tags_and_guns_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %>
+</ul>  
+
+
+
+<ul class="listings-show-lists" id="wire_baskets-listings-show-pictures">
+	<% @wire_baskets_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
+
+
+<ul class="listings-show-lists" id="racks-listings-show-pictures">
+	<% @racks_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+
+	<% end %> 
+</ul>  
+
+
+<ul class="listings-show-lists" id="hangers-listings-show-pictures">
+	<% @hangers_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>  
+
+
+
+<ul class="listings-show-lists" id="gridwall-listings-show-pictures">
+	<% @gridwall_pictures.each do |pic| %>
+	<li>
+		<%= image_tag pic.image.url %><br>
+		<%= pic.description %><br>
+		<%= pic.size %><br>
+		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+	</li>
+	<% end %> 
+</ul>
 
 
 
