@@ -1,12 +1,5 @@
 $(document).ready(function(){
-	
 	$(".listings-show-lists").hide();
-
-
-
-
-
-
 
 
 	SetNames('gondolas');
@@ -37,6 +30,13 @@ $(document).ready(function(){
 	SetLiSelector(12, 'gridwall');
 
 
+
+
+
+
+
+});
+
 function SetNames(name) {
 	$("#" + name).on("click", function(){
 		event.preventDefault();
@@ -56,10 +56,3 @@ function SetLiSelector(li_id, name) {
 
 
 };
-
-
-
-
-
-
-});
