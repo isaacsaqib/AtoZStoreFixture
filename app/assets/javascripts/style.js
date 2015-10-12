@@ -34,9 +34,6 @@ $(document).ready(function(){
 
 
 
-
-});
-
 function SetNames(name) {
 	$("#" + name).on("click", function(){
 		event.preventDefault();
@@ -56,3 +53,5 @@ function SetLiSelector(li_id, name) {
 
 
 };
+
+});
