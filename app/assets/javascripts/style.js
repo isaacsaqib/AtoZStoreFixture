@@ -34,6 +34,9 @@ $(document).ready(function(){
 
 });
 
+
+};
+
 // for click on listing to show its products.
 
 function SetNames(name) {
@@ -56,6 +59,3 @@ function SetLiSelector(li_id, name) {
 		$('body').css('background-image', 'none').css('background-color', 'white');
 
 	});
-
-
-};
