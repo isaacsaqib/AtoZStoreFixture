@@ -32,6 +32,8 @@ $(document).ready(function(){
 
 
 
+});
+
 
 
 function SetNames(name) {
@@ -53,5 +55,3 @@ function SetLiSelector(li_id, name) {
 
 
 };
-
-});
