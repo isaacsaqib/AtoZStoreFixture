@@ -4,8 +4,8 @@ class SessionController < ApplicationController
   end
 
   def create
-    # finds the admin by the given username
-    admin = Admin.find_by(username: params[:username])
+    # finds the admin by the given email
+    admin = Admin.find_by(email: params[:email])
     # if we found the admin and they gave us the right password
     if admin && admin.authenticate(params[:password])
       # store admin id in session

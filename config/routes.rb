@@ -6,7 +6,7 @@ resources :listings
 
 
 
-
+resources :admins
 resources :pictures
 
 

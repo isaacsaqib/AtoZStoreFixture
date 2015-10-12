@@ -38,9 +38,13 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+
+			<%if logged_in? %>
+
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -67,9 +71,12 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
+
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -96,9 +103,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -125,9 +134,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -154,9 +165,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -183,9 +196,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -212,9 +227,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -241,9 +258,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						<!-- Name, price and buttons -->
@@ -271,9 +290,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						</li>
@@ -302,9 +323,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						</li>
@@ -332,9 +355,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						</li>
@@ -361,9 +386,11 @@
 						<% else %>
 		              		N/A
 		            	<% end %>
+		            <%if logged_in? %>
 						<%= link_to "Delete Section", listing, :method => :delete,
 		                                  data: { confirm: "You sure?" } %>
 		                <%= link_to "Edit Section", edit_listing_path(listing) %>
+		            <% end %>
 
 
 						</li>
@@ -383,8 +410,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -396,8 +426,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -407,8 +440,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -420,8 +456,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -432,8 +471,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -444,8 +486,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -456,8 +501,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -468,8 +516,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %>
 </ul>  
@@ -481,8 +532,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -493,8 +547,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 
 	<% end %> 
@@ -506,8 +563,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>  
@@ -519,8 +579,11 @@
 	<li>
 		<%= image_tag pic.image.url %><br>
 		<%= pic.description %><br>
+		
 		<%= pic.size %><br>
+		<% if logged_in? %>
 		<%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+		<% end %>
 	</li>
 	<% end %> 
 </ul>
