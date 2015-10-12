@@ -34,22 +34,26 @@ $(document).ready(function(){
 
 });
 
-
+// for click on listing to show its products.
 
 function SetNames(name) {
 	$("#" + name).on("click", function(){
 		event.preventDefault();
 		$("#" + name + "-listings-show-pictures").show();
 		$(".products").fadeOut();
+		$('body').css('background-image', 'none').css('background-color', 'white');
 	});
 
 };
 
-function SetLiSelector(li_id, name) {
+// for top nav--changing sections
+
+function SetLiSelector(li_id, name) { 
 	$("#listings-nav li:nth-child(" + li_id + ")").on("click", function(){
 		$(".listings-show-lists").fadeOut();
 		$("#" + name + "-listings-show-pictures").show();
 		$(".products").fadeOut();
+		$('body').css('background-image', 'none').css('background-color', 'white');
 
 	});
 
