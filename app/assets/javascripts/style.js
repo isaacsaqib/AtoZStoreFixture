@@ -1,4 +1,12 @@
 $(document).ready(function(){
+	$("#listings-index-table").hide();
+	$("#listings-nav").hide();
+
+
+function HideLists(name) {
+	$("#" + name + "-listings-show-pictures").hide();
+
+}
 
 // for click on listing to show its products.
 
@@ -26,8 +34,23 @@ function SetLiSelector(li_id, name) {
 
 };
 
+;
 
-	$(".listings-show-lists").hide();
+	HideLists('gondolas');
+	HideLists('mannequins');
+	HideLists('pharmacy_displays');
+	HideLists('security_mirrors');
+	HideLists('shopping_carts_and_baskets');
+	HideLists('showcases');
+	HideLists('slatwall_and_accessories');
+	HideLists('tags_and_guns');
+	HideLists('wire_baskets');
+	HideLists('racks');
+	HideLists('hangers');
+	HideLists('gridwall');
+
+
+
 
 
 	SetNames('gondolas');
@@ -56,6 +79,20 @@ function SetLiSelector(li_id, name) {
 	SetLiSelector(10, 'racks');
 	SetLiSelector(11, 'hangers');
 	SetLiSelector(12, 'gridwall');
+
+
+	$("#explore-button").on("click", function(){
+		event.preventDefault();
+		$(".container").fadeOut();
+		$("#front-table").fadeOut();
+		$("#listings-index-table").fadeIn();
+		$("#listings-nav").fadeIn();
+		$('body').css('background-image', 'none').css('background-color', 'white');
+
+
+
+
+	})
 
 
 
