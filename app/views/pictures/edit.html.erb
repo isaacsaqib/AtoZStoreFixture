@@ -12,12 +12,13 @@
     <%= f.label :size %>
 
     <%= f.text_field :size%><br>    
-  	<%= link_to "Delete picture", @picture, :method => :delete,
-                                      data: { confirm: "You sure?" } %>
-
-  
  
     <%= f.submit  %>
+
+  <br>
+  <br>
+  	<%= link_to "Delete picture", @picture, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
 
 
 <% end %>

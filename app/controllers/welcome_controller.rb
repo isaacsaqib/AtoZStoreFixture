@@ -64,4 +64,9 @@ class WelcomeController < ApplicationController
 	
   end
 
+  def edit
+  	@listing = Listing.find(params[:id])
+  end
+
+
 end

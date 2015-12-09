@@ -7,7 +7,7 @@
     @listing = Listing.find(params[:id])
 
     @pictures = @listing.pictures
-    debugger
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pictures }

@@ -21,6 +21,10 @@ body {
 	display: inline-block;
 }
 
+.listings-show-lists li > a {
+	color: black;
+}
+
 #listings-nav li:hover {
 	cursor: pointer;
 	color: #CC6601;
@@ -94,6 +98,7 @@ margin-top: 100px;
 	margin:0 auto;
 	text-align: center;
 	color: black;
+	width: 100%;
 
 }
 #listings-index-table li {
@@ -107,7 +112,9 @@ margin-top: 100px;
 	border-radius: 600px;
 }
 
-
+#listings-index-table > li > a {
+	color: black;
+}
 
 
 
@@ -137,12 +144,15 @@ margin-top: 100px;
 
 }
 
+
 #listings-show-pictures {
 
 	/*margin: 0 auto;*/
 	/*margin-left: 100px;*/
 	text-align: center;
 }
+
+
 
 
 #listings-details {
@@ -230,6 +240,13 @@ table {
 	
 }
 
+.edit_picture a {
+	color: black;
+}
+
+#images_ {
+	margin: 0 auto;
+}
 
 
 

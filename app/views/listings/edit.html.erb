@@ -1,19 +1,24 @@
 <h1>Editing article</h1>
  
 
+<div style="background-color:white; width:100%;text-align:center;height:400px;padding-top:50px;">
 
 <%= form_for :listing, url: listing_path(@listing),:html => {:multipart => true}, method: :patch do |f| %>
  
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
 	<%= f.label :description %>
-	<%= f.text_field :description %>
+	<%= f.text_field :description %><br>
 
- <%= file_field_tag "images[]", type: :file, multiple: true %>
 
     <%=f.label :section %>
-   <%=f.text_field :section %>
+   <%=f.text_field :section %><br><br>
+   
+    <%=f.label "Upload" %><br>
+ 	<%= file_field_tag "images[]", type: :file, multiple: true %><br>
     <%= f.submit %>
  
 <% end %>
+
+</div>
  
