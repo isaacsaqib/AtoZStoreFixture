@@ -53,3 +53,5 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'aws-sdk', '< 2.0'
 
+gem 'responders', '~> 2.0'
+

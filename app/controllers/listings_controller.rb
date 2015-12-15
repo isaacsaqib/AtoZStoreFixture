@@ -1,5 +1,7 @@
 class ListingsController < ApplicationController
 	skip_before_filter  :verify_authenticity_token
+
+	  respond_to :html, :js
 	def index
 
 		@listings = Listing.all
@@ -63,6 +65,10 @@ class ListingsController < ApplicationController
 		@listings_gridwall_pictures = Listing.find_by(:id => 17)
 		@gridwall_pictures = @listings_gridwall_pictures.pictures
 	
+	 respond_to do |format|
+    format.html
+    format.json
+  end
 	end
 
 	# def set_names(name, id)
@@ -85,6 +91,10 @@ class ListingsController < ApplicationController
 	def new
 		@listing = Listing.new
 
+ respond_to do |format|
+    format.html
+    format.json
+  end
 	end
 
 
@@ -107,7 +117,12 @@ class ListingsController < ApplicationController
       format.html { render action: "new" }
       format.json { render json: @listing.errors, status: :unprocessable_entity }
     end
+     respond_to do |format|
+    format.html
+    format.json
+  	end
   end
+
 end
 
 	

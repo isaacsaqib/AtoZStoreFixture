@@ -75,7 +75,7 @@ def update
 
     @picture = Picture.find(params[:id])
     if @picture.update(picture_params)
-      redirect_to "/"
+        redirect_to "/"
     else
       render :edit
     end

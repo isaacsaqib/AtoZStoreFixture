@@ -1,7 +1,10 @@
   <html>
 
 <body>
+<div id="listing-form" style="display:none;">
 
+<%= link_to 'New Listing', new_listing_path, remote: true %>
+</div>
 
 
 <div class="container">
@@ -507,7 +510,20 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+      <%= form_for pic, remote: true, :html => {:id => "edit-form"} do |f| %>
+
+
+    <%= f.label :description %>
+
+    <%= f.text_field :description%><br>
+
+    <%= f.label :size %>
+
+    <%= f.text_field :size%><br>    
+ 
+    <%= f.submit "Update", :id => "update-button"  %>
+
+    <% end %>
     <% end %>
   </li>
   <% end %> 
@@ -677,10 +693,28 @@
     <%= pic.size %><br>
     <% if logged_in? %>
     <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+  <%= form_for pic do |f| %>
+
+    <%= image_tag pic.image.url %><br>
+    <%= f.label :description %>
+
+    <%= f.text_field :description%><br>
+
+    <%= f.label :size %>
+
+    <%= f.text_field :size%><br>    
+ 
+    <%= f.submit  %>
+
+    <% end %>
+
+
     <% end %>
   </li>
   <% end %> 
 </ul>
+
 
 
 

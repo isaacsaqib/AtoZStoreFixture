@@ -1,6 +1,14 @@
 $(document).ready(function(){
 	$("#listings-index-table").hide();
 	$("#listings-nav").hide();
+	$("#ajax-success").hide();
+
+	// $(".container").hide();
+	// $("#front-table").hide();
+	// $("#gondolas-listings-show-pictures").show();
+
+
+
 
 
 function HideLists(name) {
@@ -92,8 +100,14 @@ function SetLiSelector(li_id, name) {
 
 
 
-	})
+	});
 
+	$('#edit-form').on('ajax:success', function(event, xhr, status, error) {
+  		$("#edit-form").append("<p>Thank you</p>")
+  		$("#desc").load();
+
+
+	});
 
 
 });

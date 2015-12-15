@@ -1,12 +1,15 @@
 class WelcomeController < ApplicationController
-	
+
+
+	  respond_to :html, :js
+
   def index
   	@listings = Listing.all
 
 
 
 		@listings_gondolas = Listing.where(:section => "Gondola and Accessories")
-		@listings_gondolas_pictures = Listing.find_by(:id => 18)
+		@listings_gondolas_pictures = Listing.find_by(:id => 34)
 		@gondolas_pictures = @listings_gondolas_pictures.pictures
 
 
@@ -32,13 +35,13 @@ class WelcomeController < ApplicationController
 
 		
 		@listings_showcases = Listing.where(:section => "Showcase")
-		@listings_showcases_pictures = Listing.find_by(:id => 26)
+		@listings_showcases_pictures = Listing.find_by(:id => 25)
 		@showcases_pictures = @listings_showcases_pictures.pictures
 		
 
 		
 		@listings_slatwall_and_accessories = Listing.where(:section => "Slatwall and Accessories")
-		@listings_slatwall_and_accessories_pictures = Listing.find_by(:id => 27)
+		@listings_slatwall_and_accessories_pictures = Listing.find_by(:id => 26)
 		@slatwall_and_accessories_pictures = @listings_slatwall_and_accessories_pictures.pictures
 		
 		@listings_tags_and_guns = Listing.where(:section => "Tags and Guns")
@@ -50,7 +53,7 @@ class WelcomeController < ApplicationController
 		@wire_baskets_pictures = @listings_wire_baskets_pictures.pictures
 		
 		@listings_racks = Listing.where(:section => "Racks")
-		@listings_racks_pictures = Listing.find_by(:id => 28)
+		@listings_racks_pictures = Listing.find_by(:id => 35)
 		@racks_pictures = @listings_racks_pictures.pictures
 		
 
@@ -62,11 +65,64 @@ class WelcomeController < ApplicationController
 		@listings_gridwall_pictures = Listing.find_by(:id => 17)
 		@gridwall_pictures = @listings_gridwall_pictures.pictures
 	
+
+	 respond_to do |format|
+    format.html
+    format.json
+  	end
+
+  end
+
+	def new
+	@listing = Listing.new
+
+	 respond_to do |format|
+	    format.html
+	    format.json
+	  end
+
+	end
+
+
+
+	def create
+		@listing = Listing.new(listing_params)
+
+		respond_to do |format|
+			if @listing.save
+				if params[:images]
+					params[:images].each {|image|
+						@listing.pictures.create(image: image)
+					}
+
+				end
+
+		format.html { redirect_to @listing, notice: 'listing was successfully created.' }
+      format.json { render json: @listing, status: :created, location: @listing }
+    else
+      format.html { render action: "new" }
+      format.json { render json: @listing.errors, status: :unprocessable_entity }
+    end
+
+     respond_to do |format|
+    format.html
+    format.json
+  	end
   end
 
   def edit
   	@listing = Listing.find(params[:id])
+  	@picture = Picture.find(params[:id])
+
   end
+
+  def update
+      @picture = Picture.find(params[:id])
+
+  end
+
+end
+
 
 
 end

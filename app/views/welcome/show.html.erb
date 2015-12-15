@@ -1,0 +1,37 @@
+
+ 
+
+
+
+
+   <ul id="listings-show-pictures">
+   <% @pictures.each do |pic| %>
+
+      <li>
+      <%= image_tag pic.image.url %><br>
+      <%= pic.description %><br>
+      <%= pic.size %><br>
+      <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+      </li>
+     
+  <% end %> 
+    </ul>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
