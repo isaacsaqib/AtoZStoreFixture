@@ -510,7 +510,7 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-      <%= form_for pic, remote: true, :html => {:id => "edit-form"} do |f| %>
+      <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
 
 
     <%= f.label :description %>

@@ -102,9 +102,9 @@ function SetLiSelector(li_id, name) {
 
 	});
 
-	$('#edit-form').on('ajax:success', function(event, xhr, status, error) {
-  		$("#edit-form").append("<p>Thank you</p>")
-  		$("#desc").load();
+	$('.edit-form').on('ajax:success', function() {
+  		$(this).append("<p>Thank you</p>")
+
 
 
 	});
