@@ -510,9 +510,8 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-      <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
 
-
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
     <%= f.label :description %>
 
     <%= f.text_field :description%><br>
@@ -524,6 +523,9 @@
     <%= f.submit "Update", :id => "update-button"  %>
 
     <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -539,7 +541,22 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -553,7 +570,22 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -569,7 +601,22 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -583,8 +630,23 @@
     <%= pic.description %><br>
     
     <%= pic.size %><br>
-    <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+   <% if logged_in? %>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -599,7 +661,22 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -614,7 +691,22 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -628,8 +720,23 @@
     <%= pic.description %><br>
     
     <%= pic.size %><br>
-    <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+   <% if logged_in? %>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %>
@@ -645,7 +752,22 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -660,7 +782,22 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
 
@@ -675,8 +812,23 @@
     <%= pic.description %><br>
     
     <%= pic.size %><br>
-    <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
+   <% if logged_in? %>
+
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
+
+      <%= f.text_field :description%><br>
+
+      <%= f.label :size %>
+
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
+
+      <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
     <% end %>
   </li>
   <% end %> 
@@ -692,22 +844,23 @@
     
     <%= pic.size %><br>
     <% if logged_in? %>
-    <%= link_to "Edit picture", edit_picture_path(pic) %><br><br>
 
-  <%= form_for pic do |f| %>
+    <%= form_for pic, remote: true, :html => {:class => "edit-form"} do |f| %>
+      <%= f.label :description %>
 
-    <%= image_tag pic.image.url %><br>
-    <%= f.label :description %>
+      <%= f.text_field :description%><br>
 
-    <%= f.text_field :description%><br>
+      <%= f.label :size %>
 
-    <%= f.label :size %>
+      <%= f.text_field :size%><br>    
+   
+      <%= f.submit "Update", :id => "update-button"  %>
 
-    <%= f.text_field :size%><br>    
- 
-    <%= f.submit  %>
 
     <% end %>
+
+    <%= link_to "Delete picture", pic, :method => :delete,
+                                      data: { confirm: "You sure?" } %>
 
 
     <% end %>

@@ -24,6 +24,8 @@ function SetNames(name) {
 		$("#" + name + "-listings-show-pictures").show();
 		$(".products").fadeOut();
 		$('body').css('background-image', 'none').css('background-color', 'white');
+			$("#listings-index-table").hide();
+
 	});
 
 };

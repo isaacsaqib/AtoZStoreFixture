@@ -10,7 +10,9 @@ class WelcomeController < ApplicationController
 
 		@listings_gondolas = Listing.where(:section => "Gondola and Accessories")
 		@listings_gondolas_pictures = Listing.find_by(:id => 34)
-		@gondolas_pictures = @listings_gondolas_pictures.pictures
+		@gondolas_pictures = @listings_gondolas_pictures.pictures.order(description: :asc)
+
+
 
 
 		@listings_mannequins = Listing.where(:section => "Mannequin")
