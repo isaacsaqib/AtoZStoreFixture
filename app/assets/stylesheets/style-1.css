@@ -137,24 +137,8 @@ li.below:after { /* by using :after we place the caption after the image, when u
   text-decoration: emphasize;
 }*/
 
-@media (max-width: 760px) {
 
 
-  #logo-font {
-    font-size: 20px;
-  }
-
-  #front-table p{
-    font-size: 18px;
-
-  }
-}
-
-@media (max-width: 960px) {
-  .phone-email {
-    margin: 0px;
-    font-size: 20px;
-  }
 
 
   }

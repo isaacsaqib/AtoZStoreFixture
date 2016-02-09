@@ -42,32 +42,19 @@ body {
 	
 }
 
-/*sticky footer*/
-.wrapper-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -80px; 
-}
-.wrapper-wrap:after {
-  content: "";
-  display: block;
-}
-.site-footer, .wrapper-wrap:after {
-margin-top: 100px;
-  height: 110px; 
-}
-.site-footer {
+
+#footer-div {
   background: #CC6601;
 }
 
-.site-footer p {
+#footer-div p {
 	font-size: 10px;
 	font-family: 'AdelleSans-Thin';
 	color: white;
 }
 
-.site-footer p:nth-child(1) {
-	padding-top: 25px;
+#footer-div p:nth-child(1) {
+	padding-top: 15px;
 }
 
 /*end sticky*/
@@ -130,6 +117,8 @@ margin-top: 100px;
 	margin-bottom: 20px;
 
 }
+
+
 
 
 #listings-show-pictures li > img:hover {
@@ -272,5 +261,30 @@ th {
 .img-responsive {
 	width: 100%;
 }
+
+#footer-div {
+
+  height: 100px;
+  width: 100%;
+
+
+}
+
+@media (max-width: 1362px) {
+  	#explore-button {
+  		font-size: 20px;
+  	}
+
+  	.phone-email {
+  		font-size: 10px;
+  	}
+
+  	#footer-div {
+  		/*height: 20px;*/
+  	}
+  
+
+}
+
 
  
