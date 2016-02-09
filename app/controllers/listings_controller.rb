@@ -24,7 +24,7 @@ class ListingsController < ApplicationController
 		
 
 		@listings_security_mirrors = Listing.where(:section => "Security Mirror")
-		@listings_security_mirrors_pictures = Listing.find_by(:id => 5)
+		@listings_security_mirrors_pictures = Listing.find_by(:id => 5).order(:name)
 		@security_mirrors_pictures = @listings_security_mirrors_pictures.pictures
 		
 
