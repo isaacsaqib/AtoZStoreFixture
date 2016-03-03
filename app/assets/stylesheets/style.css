@@ -288,7 +288,7 @@ th {
   		/*height: 20px;*/
   	}
 
-  	.container {
-  		margin-top: 340px;
+  	.carousel-inner {
+  		margin-top: 320px;
   	}
 }
