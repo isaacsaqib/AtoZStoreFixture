@@ -279,12 +279,16 @@ th {
   		font-size: 10px;
   	}
 
-  	#footer-div {
-  		/*height: 20px;*/
-  	}
-  
-
 }
 
+@media (max-width: 1000px) {
 
- 
+ 	#footer-div {
+  		margin-top: 500px;
+  		/*height: 20px;*/
+  	}
+
+  	.container {
+  		margin-top: 340px;
+  	}
+}
