@@ -77,18 +77,18 @@
 
 <!--  -->
 
-<ul style="background-color:white; margin:0 auto; width:95%;" id="listings-nav">
-    <li>Gondolas •</li>
-    <li>Mannequins •</li>
-    <li>Pharmacy Displays •</li>
-    <li>Security Mirrors •</li>
-    <li>Shopping Carts And Baskets •</li>
-    <li>Showcases •</li>
-    <li>Slatwall And Accessories •</li>
-    <li>Tags And Guns •</li>
-    <li>Wire Baskets •</li>
-    <li>Racks •</li>
-    <li>Hangers •</li>
+  <ul id="listings-nav">
+    <li>Gondolas </li>
+    <li>Mannequins </li>
+    <li>Pharmacy Displays </li>
+    <li>Security Mirrors </li>
+    <li>Shopping Carts And Baskets </li>
+    <li>Showcases </li>
+    <li>Slatwall And Accessories </li>
+    <li>Tags And Guns </li>
+    <li>Wire Baskets </li>
+    <li>Racks </li>
+    <li>Hangers </li>
     <li>Gridwall </li>
 
   </ul>
@@ -98,38 +98,33 @@
 <ul style="background-color:white; width: 100%;" id= "listings-index-table">
     
     <li>
-    <table class="products" id="gondolas">
-      <tr>
-        <td class="col">
-          <ul>
-          <% @listings_gondolas.each do |listing| %>
+      <table class="products" id="gondolas">
+        <tr>
+          <td class="col">
+            <ul>
 
-                  <li>
-            <% if listing.pictures.first %>
-                  <!--listing image pictures -->
-                  <%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
-            <p><%= listing.name %></p>
-            <% else %>
-                      N/A
-                  <% end %>
+            <% @listings_gondolas.each do |listing| %>
 
-
-
-
-            <!-- Name, price and buttons -->
-            
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </table>
-            <% if logged_in? %>
-            <%= link_to "Delete Section", listing, :method => :delete,
-                                      data: { confirm: "You sure?" } %>
-                                      <br>
-                                      <br>
-                    <%= link_to "Edit Section", edit_listing_path(listing) %>
+              <li>
+                <% if listing.pictures.first %>
+                      <!--listing image pictures -->
+                      <%= link_to image_tag(listing.pictures.first.image.url), listing_path(listing) %>
+                      <p><%= listing.name %></p>
+                <% else %>
+                        N/A
                 <% end %>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+              <% if logged_in? %>
+              <%= link_to "Delete Section", listing, :method => :delete,
+                                        data: { confirm: "You sure?" } %>
+                                        <br>
+                                        <br>
+                      <%= link_to "Edit Section", edit_listing_path(listing) %>
+              <% end %>
             <% end %>
     </li>
 
@@ -504,6 +499,7 @@
 
 
 <ul class="listings-show-lists" id="gondolas-listings-show-pictures">
+    <h1>GONDOLAS</h1>
   <% @gondolas_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -535,6 +531,7 @@
 
 
 <ul class="listings-show-lists" id="mannequins-listings-show-pictures">
+  <h1>MANNEQUINS</h1>
   <% @mannequins_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -564,6 +561,7 @@
 </ul>  
 
 <ul class="listings-show-lists" id="pharmacy_displays-listings-show-pictures">
+  <h1>PHARMACY DISPLAYS</h1>
   <% @pharmacy_displays_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -595,6 +593,7 @@
 
 
 <ul class="listings-show-lists" id="security_mirrors-listings-show-pictures">
+  <h1>SECURITY MIRRORS</h1>
   <% @security_mirrors_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -625,6 +624,7 @@
 
 
 <ul class="listings-show-lists" id="shopping_carts_and_baskets-listings-show-pictures">
+  <h1>SHOPPING CARTS AND BASKETS</h1>
   <% @shopping_carts_and_baskets_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -655,6 +655,7 @@
 
 
 <ul class="listings-show-lists" id="showcases-listings-show-pictures">
+  <h1>SHOWCASES</h1>
   <% @showcases_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -685,6 +686,7 @@
 
 
 <ul class="listings-show-lists" id="slatwall_and_accessories-listings-show-pictures">
+  <h1>SLATWALL/ACCESSORIES</h1>
   <% @slatwall_and_accessories_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -715,6 +717,7 @@
 
 
 <ul class="listings-show-lists" id="tags_and_guns-listings-show-pictures">
+  <h1>TAGS AND GUNS</h1>
   <% @tags_and_guns_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -746,6 +749,7 @@
 
 
 <ul class="listings-show-lists" id="wire_baskets-listings-show-pictures">
+  <h1>WIRE BASKETS</h1>
   <% @wire_baskets_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -776,6 +780,7 @@
 
 
 <ul class="listings-show-lists" id="racks-listings-show-pictures">
+  <h1>RACKS</h1>
   <% @racks_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -807,6 +812,7 @@
 
 
 <ul class="listings-show-lists" id="hangers-listings-show-pictures">
+  <h1>HANGERS</h1>
   <% @hangers_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>
@@ -838,6 +844,7 @@
 
 
 <ul class="listings-show-lists" id="gridwall-listings-show-pictures">
+  <h1>GRIDWALL</h1>
   <% @gridwall_pictures.each do |pic| %>
   <li>
     <%= image_tag pic.image.url %><br>

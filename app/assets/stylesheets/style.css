@@ -4,19 +4,26 @@ body {
 	background-image: url("http://i59.tinypic.com/11az693.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	 height: 100%;
+	height: 100%;
+	padding: 0px;
     margin:0px;  
     text-align: center;
 }
 
-#listings-nav li {
-	display: inline-block;
-	font-family: 'AdelleSans-Thin';
-	/*margin-right: 5px;*/
-	/*margin-left: 5px;*/
-	/*text-transform: up*/
+#listings-nav {
+	margin-top:50px;
 }
 
+#listings-nav li {
+	font-size: 20px;
+	padding-bottom: 10px;
+	font-family: 'AdelleSans-Thin';
+}
+
+#listings-nav li:hover {
+	cursor: pointer;
+	color: #CC6601;
+}
 .listings-show-lists li {
 	display: inline-block;
 }
@@ -25,10 +32,11 @@ body {
 	color: black;
 }
 
-#listings-nav li:hover {
-	cursor: pointer;
-	color: #CC6601;
+.listings-show-lists > h1 {
+	margin:50px 0px 50px 0px;
+	font-size: 85px;
 }
+
 
 #security_mirrors-listings-show-pictures img {
 	height: 150px;
@@ -103,22 +111,13 @@ body {
 	color: black;
 }
 
-
-
-
-
-
-
 #listings-show-pictures li > img {
 
 	height:400;
 	width: 302px;
-	/*margin-left: 10px;*/
 	margin-bottom: 20px;
 
 }
-
-
 
 
 #listings-show-pictures li > img:hover {
@@ -264,7 +263,7 @@ th {
 
 #footer-div {
 
-  height: 100px;
+  height: 130px;
   width: 100%;
 
 

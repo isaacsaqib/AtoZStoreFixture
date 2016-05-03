@@ -6,10 +6,10 @@ class ListingsController < ApplicationController
 
 		@listings = Listing.all
 
-
+		LIVE DB
 
 		@listings_gondolas = Listing.where(:section => "Gondola and Accessories")
-		@listings_gondolas_pictures = Listing.find_by(:id => 1)
+		@listings_gondolas_pictures = Listing.find_by(:id => 12)
 		@gondolas_pictures = @listings_gondolas_pictures.pictures
 
 
@@ -64,7 +64,8 @@ class ListingsController < ApplicationController
 		@listings_gridwall = Listing.where(:section => "Gridwall")
 		@listings_gridwall_pictures = Listing.find_by(:id => 13)
 		@gridwall_pictures = @listings_gridwall_pictures.pictures
-	
+
+		
 	 respond_to do |format|
     format.html
     format.json
