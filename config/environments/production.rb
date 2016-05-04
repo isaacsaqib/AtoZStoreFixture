@@ -10,9 +10,6 @@ Rails.application.configure do
   }
 }
 
-
-ENV['AZ_ACCESS_KEY_ID'] = "AKIAJZG2MFC64VXKUDEQ"
-ENV['AZ_SECRET_ACCESS_KEY'] = 
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
