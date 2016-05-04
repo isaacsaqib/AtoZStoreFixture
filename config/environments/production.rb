@@ -8,8 +8,7 @@ Rails.application.configure do
     :access_key_id => ENV['AZ_ACCESS_KEY_ID'],
     :secret_access_key => ENV['AZ_SECRET_ACCESS_KEY']
   }
-  }
-
+}
 
   # Settings specified here will take precedence over those in config/application.rb.
 
