@@ -6,7 +6,7 @@ class ListingsController < ApplicationController
 
 		@listings = Listing.all
 
-		LIVE DB
+		# LIVE DB
 
 		@listings_gondolas = Listing.where(:section => "Gondola and Accessories")
 		@listings_gondolas_pictures = Listing.find_by(:id => 12)
