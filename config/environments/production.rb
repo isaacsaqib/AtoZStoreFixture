@@ -4,12 +4,15 @@ Rails.application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['AZ_BUCKET'],
-    :access_key_id => ENV['AZ_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AZ_SECRET_ACCESS_KEY']
+    :bucket => "azstore",
+    :access_key_id => "AKIAJZG2MFC64VXKUDEQ",
+    :secret_access_key => "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"
   }
 }
 
+
+ENV['AZ_ACCESS_KEY_ID'] = "AKIAJZG2MFC64VXKUDEQ"
+ENV['AZ_SECRET_ACCESS_KEY'] = 
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
