@@ -3,9 +3,9 @@ Rails.application.configure do
  config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => "azstore",
-    :access_key_id => "AKIAJZG2MFC64VXKUDEQ",
-    :secret_access_key => "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"
+    :bucket => 'azstore',
+    :access_key_id => 'AKIAJZG2MFC64VXKUDEQ',
+    :secret_access_key => '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'
   }
 }
 
