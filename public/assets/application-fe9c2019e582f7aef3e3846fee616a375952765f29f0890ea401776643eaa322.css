@@ -1,0 +1,455 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#navbar {
+  margin: 0px 36px 0px 60px;
+  padding: 10px;
+  background: rgba(0, 0, 0, .8);
+}
+
+#navbar li {
+  display: inline;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  font-family: 'AdelleSans-Thin';
+  padding: 0px 10px 0px 10px;
+}
+
+#navbar li:hover {
+  background-color: red;
+  transition: .3s;
+  cursor: pointer;
+  /*border-radius: 6px;*/
+}
+
+
+
+
+#front-table li {
+  display: inline-block;
+  height: 100px;
+  width: 40%;
+  border: 3px solid white;
+  margin: 0px;
+  background-color: black;
+}
+
+#front-table p {
+  font-family: 'AdelleSans-Thin';
+  padding-top: 30px;
+  color: white;
+  font-size: 30px;
+
+
+}
+
+
+#front-table li:hover {
+  background-color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  border: 5px solid black;
+}
+
+#front-table li:hover{
+  /*background-color: white;*/
+}
+
+#front-table p:hover {
+  color: black;
+}
+
+#front-table > li > div > p > a:hover {
+
+  color: white;
+}
+
+#myCarousel {
+    box-shadow: 2px 3px 8px 6px black;
+    margin-top:30px;
+}
+
+
+
+
+
+#header {
+background-color: #CC6601;
+height: 60px;
+z-index: 4;
+margin-top: 2px;
+ }
+
+#header li {
+  float: left;
+  color: white;
+  /*font-size: 40px;*/
+  display: inline;
+  margin-left: 50px;
+}
+
+#logo-font {
+  font-family: 'AdelleSans-Thin';
+  font-size: 40px;
+  margin-top: 7px;
+
+
+}
+
+#logo-font > a:hover {
+  color: white;
+  
+}
+
+
+
+
+.seperater-text {
+  color: white;
+  text-decoration: underline;
+  font-family: 'AdelleSans-Thin';
+  font-size: 50px;
+  padding-top: 30px;
+  /*background-color: rgba(0, 0, 0, .);*/
+  /*text-align: center;*/
+  /*margin: 15px;*/
+}
+
+
+
+.phone-email {
+  margin-top: 30px;
+  font-family: 'AdelleSans-Thin';
+  font-size: 20px;
+}
+
+/*
+li.below:after { /* by using :after we place the caption after the image, when used with display:block this will be underneath the image*/
+/*content: attr(title); /*places the contents of title below the image*/
+/*display:block; puts the caption on its own line instead of at the side of the image*/
+
+/*.products p {
+  color: white;
+  font-family: 'AdelleSans-Thin';
+  font-size: 16px;
+  text-decoration: emphasize;
+}*/
+
+
+
+
+
+
+body {
+	background-image: url("http://i59.tinypic.com/11az693.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	padding: 0px;
+    margin:0px;  
+    text-align: center;
+}
+
+#listings-nav {
+	margin-top:50px;
+}
+
+#listings-nav li {
+	font-size: 20px;
+	padding-bottom: 10px;
+	font-family: 'AdelleSans-Thin';
+}
+
+#listings-nav li:hover {
+	cursor: pointer;
+	color: #CC6601;
+}
+.listings-show-lists li {
+	display: inline-block;
+}
+
+.listings-show-lists li > a {
+	color: black;
+}
+
+.listings-show-lists > h1 {
+	margin:50px 0px 50px 0px;
+	font-size: 85px;
+}
+
+
+#security_mirrors-listings-show-pictures img {
+	height: 150px;
+	width: 200px;
+	
+}
+
+#hangers-listings-show-pictures img {
+	height: 150px;
+	width: 200px;
+	
+}
+
+
+#footer-div {
+  background: #CC6601;
+}
+
+#footer-div p {
+	font-size: 10px;
+	font-family: 'AdelleSans-Thin';
+	color: white;
+}
+
+#footer-div p:nth-child(1) {
+	padding-top: 15px;
+}
+
+/*end sticky*/
+
+#tags_and_guns > tbody > tr > td > ul > li > a:nth-child(1) > img {
+
+
+}
+
+
+.h1-headers {
+	text-align: center;
+	font-family: 'AdelleSans-Thin';
+}
+
+.h1-headers:hover {
+	color: #911910;
+}
+
+#gondolas img {
+	width: 400px;
+
+}
+
+
+
+#listings-index-table  {
+	margin:0 auto;
+	text-align: center;
+	color: black;
+	width: 100%;
+
+}
+#listings-index-table li {
+	display: inline-block;
+}
+
+#listings-index-table img {
+	height: 200;
+	width: 200px;
+	border: 7px solid #CC6601;
+	border-radius: 600px;
+}
+
+#listings-index-table > li > a {
+	color: black;
+}
+
+#listings-show-pictures li > img {
+
+	height:400;
+	width: 302px;
+	margin-bottom: 20px;
+
+}
+
+
+#listings-show-pictures li > img:hover {
+	opacity: .8;
+
+}
+
+#listings-show-pictures  li {
+	display: inline-block;
+
+
+
+}
+
+
+#listings-show-pictures {
+
+	/*margin: 0 auto;*/
+	/*margin-left: 100px;*/
+	text-align: center;
+}
+
+
+
+
+#listings-details {
+	margin: 0 auto;
+	width: 40%;
+	font-family: 'AdelleSans-Thin';
+	/*margin-right: 210px;*/
+	/*margin-top: 80px;*/
+}
+
+
+.line-separator{
+
+padding:1px;
+
+background:#E8E8E8;
+
+border-bottom:.5px solid #E8E8E8;
+
+}
+
+ul {
+	padding: 0px;
+}
+
+
+table {
+  margin:0 auto;
+  width: 100%;
+}
+
+.col ul {
+  text-align: center;
+
+}
+
+.products {
+	display: inline-block;
+}
+
+
+.products > tbody > tr > td > ul {
+	list-style: none;
+
+}
+
+.products li {
+	display: inline-block;
+	margin: 30px;
+	text-align: left;
+}
+
+.products li p {
+	margin: 0px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.products li a {
+	font-size:14px;
+	text-decoration: none;
+	color: black;
+	text-align: left;
+	padding-top: 10px;
+}
+
+.products li a:hover {
+	text-decoration: underline;
+
+}
+
+.products li img {
+	/*height: 454;*/
+	/*width: 302;*/
+	margin-bottom: 15px;
+
+}
+
+.products li img:hover {
+	opacity: .8;
+
+}
+
+#security_mirrors img {
+	
+}
+
+.edit_picture a {
+	color: black;
+}
+
+#images_ {
+	margin: 0 auto;
+}
+
+
+
+ul {
+	padding: 0px;
+}
+
+
+
+td {
+	text-align: center;
+	 	font-family: 'AdelleSans-Thin';
+
+}
+
+th {
+ 	/*font-family: 'AdelleSans-Thin';*/
+ 	/*font-weight: 600;*/
+ 	font-size: 12px;
+
+}
+
+.img-responsive {
+	width: 100%;
+}
+
+#footer-div {
+
+  height: 130px;
+  width: 100%;
+
+
+}
+
+@media (max-width: 1362px) {
+  	#explore-button {
+  		font-size: 20px;
+  	}
+
+  	.phone-email {
+  		font-size: 10px;
+  	}
+
+}
+
+@media (max-width: 1000px) {
+
+ 	#footer-div {
+  		margin-top: 500px;
+  		/*height: 20px;*/
+  	}
+
+  	.carousel-inner {
+  		margin-top: 320px;
+  	}
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
+
+ 
+
