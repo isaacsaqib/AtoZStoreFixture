@@ -1,0 +1,9 @@
+development:
+  access_key_id: "AKIAJZG2MFC64VXKUDEQ"
+  secret_access_key: "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"
+
+production:
+  access_key_id: "AKIAJZG2MFC64VXKUDEQ"
+  secret_access_key: "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"
+
+
